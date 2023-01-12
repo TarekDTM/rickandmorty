@@ -47,7 +47,7 @@ if (error) {
 
       }
       <nav style={{ display: 'flex', justifyContent:'space-evenly', marginBottom: '2%', marginTop: '2%', flexDirection: 'row', alignItems: 'center'}}>
-      <Button disabled={!page} size='small' onClick={() => setPage(prev => prev - 1)}>
+      <Button disabled={page === 1 } size='small' onClick={() => setPage(prev => prev - 1)}>
       Back
       </Button>
       <Typography variant='body2'>
