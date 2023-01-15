@@ -2,7 +2,7 @@ import {  Button, Grid,  Typography,} from '@mui/material'
 import { Container } from '@mui/system'
 import { CHARACHTERS_QUERY } from '../../backend';
 
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { useQuery } from '@apollo/client';
 import { MediaCard } from '../../components'
 import { Character, SerachFilter } from '../../common';
@@ -25,7 +25,7 @@ const useStyles = makeStyles({
 export  function Home() {
 
     const [page, setPage] = useState<number>(1);
-    const [filter, setFilter] = useState<SerachFilter>({name:'',})
+    const [filter] = useState<SerachFilter>({name:'',})
     const { data, loading, error} = useQuery(CHARACHTERS_QUERY ,{
         variables:{
            page: page,
@@ -71,7 +71,7 @@ export  function Home() {
       Back
       </Button>
       </div>
-      <div >
+      <div>
 
       <Typography data-testid={'Page'} variant='body2'>
          {page}

@@ -1,4 +1,3 @@
-import { CharactersRes } from './../../common/types/characters/index';
 import { gql} from '@apollo/client';
 
 export const CHARACHTERS_QUERY  = gql`
